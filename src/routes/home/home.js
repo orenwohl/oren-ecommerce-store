@@ -12,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const resp = await axios.get(url);
-      console.log(resp.data);
       setMenuItems(resp.data);
     };
     fetchData();
