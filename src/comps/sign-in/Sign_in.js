@@ -6,7 +6,6 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/button_component";
 
 import {
   signInWithhGooglePopUp,
-  createUserDocFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase_utils";
 
