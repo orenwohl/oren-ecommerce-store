@@ -7,8 +7,8 @@ import Button from "../button/button_component";
 import CartItem from "../cart-item/cart_item_component";
 
 import {
-  CartDropdownContaine,
-  EmptyMassege,
+  CartDropdownContainer,
+  EmptyMessage,
   CartItems,
 } from "./cart-dropdown.styles";
 
@@ -21,18 +21,18 @@ const CartDropdown = () => {
   };
 
   return (
-    <CartDropdownContaine>
+    <CartDropdownContainer>
       <CartItems>
         {cartItems.length ? (
           cartItems.map((cartItem) => (
             <CartItem key={cartItem.id} cartItem={cartItem} />
           ))
         ) : (
-          <EmptyMassege>Your cart is empty</EmptyMassege>
+          <EmptyMessage>Your cart is empty</EmptyMessage>
         )}
       </CartItems>
       <Button onClick={goToCheckoutHanker}>go to checkout</Button>
-    </CartDropdownContaine>
+    </CartDropdownContainer>
   );
 };
 
