@@ -1,28 +1,33 @@
-import { Outlet, Link } from "react-router-dom";
-import { useContext } from "react";
-import { ReactComponent as Logo } from "../../assets/models-ink.svg";
-import { UserContext } from "../../context/user_context";
-import { CartContext } from "../../context/cart_context";
+import { Fragment, useContext } from "react";
+import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import { signOutUser } from "../../utils/firebase_utils";
-import CartDropdown from "../../comps/cart-dropdown/cart_dropdown";
 import CartIcon from "../../comps/cart-icon/Cart_icon_component";
+import CartDropdown from "../../comps/cart-dropdown/cart_dropdown";
+
+import { CartContext } from "../../context/cart_context";
+import { selectCurrentUser } from "../../store/user/user_selector";
+
+import { ReactComponent as CrwnLogo } from "../../assets/models-ink.svg";
+import { signOutUser } from "../../utils/firebase_utils";
+
 import {
   NavigationContainer,
-  LogoContainer,
   NavLinks,
   NavLink,
-} from "./navigation.styles.js";
-const NavBar = () => {
-  const { currentUser } = useContext(UserContext);
+  LogoContainer,
+} from "./navigation.styles";
 
+const Navigation = () => {
+  const currentUser = useSelector(selectCurrentUser);
+  console.log(currentUser);
   const { isCartOpen } = useContext(CartContext);
 
   return (
-    <>
+    <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <Logo />
+          <CrwnLogo className="logo" />
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
@@ -39,7 +44,8 @@ const NavBar = () => {
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
-    </>
+    </Fragment>
   );
 };
-export default NavBar;
+
+export default Navigation;

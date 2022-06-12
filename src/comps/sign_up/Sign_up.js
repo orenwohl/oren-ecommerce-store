@@ -1,4 +1,3 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import FormInput from "../form-input/form_input";
 import "./sign_up_style.scss";
@@ -6,7 +5,7 @@ import Button from "../button/button_component";
 
 import {
   createAuthUserWithEmailAndPassword,
-  createUserDocFromAuth,
+  createUserDocumentFromAuth,
 } from "../../utils/firebase_utils";
 
 const deafultFormFields = {
@@ -25,7 +24,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert("passwords do not match");
       return;
     }
@@ -34,7 +33,7 @@ const SignUp = () => {
         email,
         password
       );
-      await createUserDocFromAuth(user, { displayName });
+      await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
