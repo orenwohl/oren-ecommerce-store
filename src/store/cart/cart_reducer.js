@@ -1,6 +1,6 @@
 import { CART_ACTION_TYPES } from "./cart_types";
 
-export const CART_INITIAL_STATE = {
+const CART_INITIAL_STATE = {
   isCartOpen: false,
   cartItems: [],
 };
