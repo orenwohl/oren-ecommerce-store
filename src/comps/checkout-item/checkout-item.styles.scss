@@ -1,25 +1,35 @@
 .checkout-item-container {
   width: 100%;
   display: flex;
-  min-height: 100px;
+  min-height: 60%;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+  @media screen and (max-width: 503px) {
+    font-size: 12px;
+    width: 100%;
+    padding: 14px;
+    display: flex;
+
+    justify-content: space-between;
+  }
 
   .image-container {
-    width: 23%;
-    padding-right: 15px;
+    width: 29%;
+    padding-right: 20px;
 
     img {
       width: 100%;
       height: 100%;
     }
   }
-  .name,
+  .name {
+    padding-right: 15px;
+  }
   .quantity,
   .price {
-    width: 23%;
+    width: 29%;
   }
 
   .quantity {

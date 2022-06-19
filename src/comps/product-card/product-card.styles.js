@@ -15,6 +15,7 @@ export const ProductCartContainer = styled.div`
   }
   button {
     width: 80%;
+    height: 50px;
     opacity: 0.7;
     position: absolute;
     top: 255px;
