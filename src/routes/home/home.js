@@ -21,7 +21,7 @@ const Home = () => {
     <div>
       {/* <Directory categories={Menu_items} /> */}
       <Directory />
-      <Outlet />
+      {/* <Outlet /> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BaseButton = styled.button`
-  min-width: 165px;
+  min-width: 1px;
   width: auto;
   height: 50px;
   letter-spacing: 0.5px;
@@ -17,6 +17,11 @@ export const BaseButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 988px) {
+    justify-content: center;
+    line-height: normal;
+  }
+
   &:hover {
     background-color: white;
     color: black;

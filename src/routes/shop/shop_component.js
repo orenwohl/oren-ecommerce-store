@@ -4,9 +4,7 @@ import { useDispatch } from "react-redux";
 import CategoriesPreview from "../categories-preview/categories_preview_components";
 import Category from "../category/category_component";
 import { fetchCategoriesStart } from "../../store/categories/category_action";
-
-import "./shop_styles.scss";
-
+import "./shop.style.scss";
 const Shop = () => {
   const dispatch = useDispatch();
 
@@ -14,10 +12,12 @@ const Shop = () => {
     dispatch(fetchCategoriesStart());
   }, []);
   return (
-    <Routes>
-      <Route index element={<CategoriesPreview />} />
-      <Route path=":category" element={<Category />} />
-    </Routes>
+    <div className="shop-container">
+      <Routes>
+        <Route index element={<CategoriesPreview />} />
+        <Route path=":category" element={<Category />} />
+      </Routes>
+    </div>
   );
 };
 
