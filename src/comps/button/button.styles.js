@@ -18,8 +18,12 @@ export const BaseButton = styled.button`
   display: flex;
   justify-content: center;
   @media screen and (max-width: 988px) {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     line-height: normal;
+    font-size: 14px;
+    justify-content: center;
+    letter-spacing: 0.5px;
   }
 
   &:hover {
