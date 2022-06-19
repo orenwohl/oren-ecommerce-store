@@ -4,11 +4,12 @@
   min-height: 60%;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 28px;
   align-items: center;
   @media screen and (max-width: 503px) {
     font-size: 12px;
     width: 100%;
+    height: auto;
     padding: 14px;
     display: flex;
 
@@ -27,9 +28,11 @@
   .name {
     padding-right: 15px;
   }
+  .name,
   .quantity,
   .price {
     width: 29%;
+    display: flex;
   }
 
   .quantity {

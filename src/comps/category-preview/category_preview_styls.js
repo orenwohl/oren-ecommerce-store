@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const CategoryPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   /* background-color: black; */
   width: 100%;
 `;

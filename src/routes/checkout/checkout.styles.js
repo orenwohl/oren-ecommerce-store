@@ -10,7 +10,7 @@ export const CheckoutContainer = styled.div`
   @media screen and (max-width: 503px) {
     font-size: 12px;
     width: 100%;
-    padding: 14px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
 
